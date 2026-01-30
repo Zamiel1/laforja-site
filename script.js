@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       registerUser({ name: nameVal, email: fullEmail, password: pw1 });
       alert('¡Cuenta creada correctamente!\n\nCorreo: ' + fullEmail + '\n\nAhora inicia sesión con tus credenciales.');
-      window.location.href = 'https://www.laforja.com.mx/email.html';
+      window.location.href = 'index.html';
     });
   }
 

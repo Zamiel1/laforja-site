@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // If no user is logged in, redirect to login
   if (!currentUser) {
-    window.location.href = 'https://www.laforja.com.mx/email.html';
+    window.location.href = 'index.html';
     return;
   }
 
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('logout-btn').addEventListener('click', () => {
     if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
       localStorage.removeItem('currentUser');
-      window.location.href = 'https://www.laforja.com.mx/email.html';
+      window.location.href = 'index.html';
     }
   });
 
