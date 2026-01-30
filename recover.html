@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <base href="https://www.laforja.com.mx/">
+    <title>Recuperar Contraseña - La forja centralo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Recuperar Contraseña</h1>
+
+      <section class="card">
+        <form id="recover-form" novalidate>
+          <label for="recover-email">Ingresa tu correo</label>
+          <div class="email-input-group">
+            <input type="text" id="recover-email" name="email" placeholder="tuusuario" required />
+            <span class="domain">@forja.com.mx</span>
+          </div>
+          <div class="error" id="recover-email-error" aria-live="polite"></div>
+
+          <button type="submit">Enviar código de recuperación</button>
+          <div class="error" id="recover-error" aria-live="polite"></div>
+          <div class="success" id="recover-success" aria-live="polite"></div>
+
+          <p class="muted" style="text-align: center; margin-top: 20px;">
+            <a href="https://www.laforja.com.mx/email.html">Volver a iniciar sesión</a>
+          </p>
+        </form>
+
+        <div id="password-display" style="display:none; margin-top: 20px;">
+          <div class="info-box">
+            <p><strong>Tu contraseña es:</strong></p>
+            <p id="displayed-password" style="font-family: monospace; background: #0f0f0f; padding: 10px; border-radius: 4px; word-break: break-all;"></p>
+            <button type="button" onclick="copyPassword()" class="secondary-btn">Copiar contraseña</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function copyPassword() {
+        const pwd = document.getElementById('displayed-password').textContent;
+        navigator.clipboard.writeText(pwd).then(() => {
+          alert('Contraseña copiada al portapapeles');
+        });
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

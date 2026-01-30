@@ -1,0 +1,159 @@
+body {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+}
+
+.card {
+  background: #121212;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #0f0f0f;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.email-input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #0f0f0f;
+  overflow: hidden;
+}
+
+.email-input-group input {
+  border: none;
+  flex: 1;
+  padding: 10px;
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+  border-radius: 0;
+}
+
+.email-input-group input:focus {
+  outline: none;
+}
+
+.email-input-group .domain {
+  padding: 10px 12px;
+  background: #1a1a1a;
+  color: #888;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  margin-top: 6px;
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  font-weight: bold;
+  margin-top: 14px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+a {
+  color: #8ecae6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.muted {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 12px;
+}
+
+.forgot-password {
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.forgot-password a {
+  color: #8ecae6;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.secondary-btn {
+  background-color: #666;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.secondary-btn:hover {
+  opacity: 0.85;
+}
+
+.info-box {
+  background: #1a1a1a;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid #8ecae6;
+}
+
+.info-box p {
+  margin: 6px 0;
+}
+
+.success {
+  color: #52b788;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  text-align: center;
+}

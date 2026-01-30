@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <base href="https://www.laforja.com.mx/">
+    <title>Correo - La Forja</title>
+    <link rel="stylesheet" href="menu-style.css" />
+  </head>
+  <body>
+    <div class="container-main">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <h1 class="logo">📧 LA FORJA CORREO</h1>
+          <div class="header-right">
+            <div class="user-info">
+              <span id="user-email" class="user-email">usuario@forja.com.mx</span>
+              <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+          <nav class="menu">
+            <div class="menu-section">
+              <button class="menu-item active" data-folder="inbox">
+                <span class="icon">📥</span>
+                <span class="text">Bandeja de entrada</span>
+                <span class="count" id="count-inbox">0</span>
+              </button>
+              <button class="menu-item" data-folder="drafts">
+                <span class="icon">📝</span>
+                <span class="text">Borradores</span>
+                <span class="count" id="count-drafts">0</span>
+              </button>
+              <button class="menu-item" data-folder="sent">
+                <span class="icon">📤</span>
+                <span class="text">Enviados</span>
+                <span class="count" id="count-sent">0</span>
+              </button>
+              <button class="menu-item" data-folder="starred">
+                <span class="icon">⭐</span>
+                <span class="text">Con estrella</span>
+                <span class="count" id="count-starred">0</span>
+              </button>
+            </div>
+
+            <div class="menu-section">
+              <button class="menu-item" data-folder="spam">
+                <span class="icon">⚠️</span>
+                <span class="text">Spam</span>
+                <span class="count" id="count-spam">0</span>
+              </button>
+              <button class="menu-item" data-folder="trash">
+                <span class="icon">🗑️</span>
+                <span class="text">Papelera</span>
+                <span class="count" id="count-trash">0</span>
+              </button>
+            </div>
+
+            <div class="menu-section">
+              <button class="menu-item settings" data-action="settings">
+                <span class="icon">⚙️</span>
+                <span class="text">Configuración</span>
+              </button>
+              <button class="menu-item help" data-action="help">
+                <span class="icon">❓</span>
+                <span class="text">Ayuda</span>
+              </button>
+            </div>
+          </nav>
+
+          <button class="compose-btn">
+            <span class="icon">✏️</span> Redactar
+          </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+          <div class="content-header">
+            <div class="search-bar">
+              <input type="text" id="search-input" placeholder="Buscar correos..." />
+              <button class="search-btn">🔍</button>
+            </div>
+            <div class="view-options">
+              <button class="view-btn" id="list-view" title="Vista de lista">≡</button>
+              <button class="view-btn" id="grid-view" title="Vista de cuadrícula">⊞</button>
+            </div>
+          </div>
+
+          <!-- Email List -->
+          <div class="email-list" id="email-list">
+            <div class="empty-state">
+              <p class="empty-icon">📭</p>
+              <p>No hay correos en esta carpeta</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modal Redactar -->
+    <div class="modal" id="compose-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Redactar correo</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <form id="compose-form" class="modal-body">
+          <input type="email" id="compose-to" placeholder="Para:" required />
+          <input type="text" id="compose-subject" placeholder="Asunto:" required />
+          <textarea id="compose-message" placeholder="Escribe tu mensaje..." required></textarea>
+          <div class="modal-actions">
+            <button type="submit" class="send-btn">Enviar</button>
+            <button type="button" class="cancel-btn">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Configuración -->
+    <div class="modal" id="settings-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Configuración</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="notification-setting" checked /> Notificaciones de correo nuevo
+            </label>
+          </div>
+          <div class="setting-item">
+            <label>
+              <input type="checkbox" id="preview-setting" checked /> Vista previa de correos
+            </label>
+          </div>
+          <div class="setting-item">
+            <label>
+              Cambiar contraseña:
+              <input type="password" id="new-password" placeholder="Nueva contraseña" />
+            </label>
+            <button class="change-password-btn">Cambiar</button>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="cancel-btn" style="width: 100%;">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="menu-script.js"></script>
+  </body>
+</html>

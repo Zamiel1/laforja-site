@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <base href="https://www.laforja.com.mx/">
+    <title>Crear cuenta - La forja centralo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Crear cuenta</h1>
+
+      <section class="card">
+        <form id="register-form" novalidate>
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu Nombre" required />
+          <div class="error" id="name-error" aria-live="polite"></div>
+
+          <label for="reg-username">Crea tu Correo</label>
+          <div class="email-input-group">
+            <input type="text" id="reg-username" name="username" placeholder="Correo Electrónico" required />
+            <span class="domain">@forja.com.mx</span>
+          </div>
+          <div class="error" id="reg-username-error" aria-live="polite"></div>
+
+          <label for="reg-password">Contraseña</label>
+          <input type="password" id="reg-password" name="password" required minlength="6" placeholder="Letras y Números (mín. 6 caracteres)" />
+          <div class="error" id="reg-password-error" aria-live="polite"></div>
+
+          <label for="reg-password2">Confirmar Contraseña</label>
+          <input type="password" id="reg-password2" name="password2" required placeholder="Repite la Contraseña" />
+          <div class="error" id="reg-password2-error" aria-live="polite"></div>
+
+          <button type="submit">Crear cuenta</button>
+          <div class="error" id="register-error" aria-live="polite"></div>
+          <p class="muted">¿Ya tienes cuenta? <a href="https://www.laforja.com.mx/email.html">Iniciar sesión</a></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

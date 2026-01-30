@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <base href="https://www.laforja.com.mx/">
+    <title>Notificación - La Forja (Descarte)</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body { background:#000; color:#fff; font-family: Arial, sans-serif; padding:24px; }
+      .card { background: linear-gradient(180deg,#0f0f0f,#141414); border:1px solid #2a2a2a; padding:20px; border-radius:8px; max-width:720px; margin:24px auto; }
+      .title { text-align:center; font-size:1.6rem; color:#fff; margin-bottom:16px; }
+      .accent { color:#e63946; font-weight:700; }
+      .body { background:#0b0b0b; padding:16px; border-radius:6px; color:#ddd; line-height:1.5; }
+      .waitlist { margin-top:14px; display:flex; align-items:center; gap:12px; }
+      .waitlist input { width:18px; height:18px; }
+      .footer { margin-top:18px; font-size:0.9rem; color:#999; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="title">LA FORJA</div>
+      <div class="body">
+        <p>¡Gracias por tu sinceridad!</p>
+
+        <p>En este momento estamos priorizando a quienes desean aportar y participar activamente.</p>
+
+        <p>¿Te gustaría que te avisemos cuando abramos una nueva generación?</p>
+
+        <div class="waitlist">
+          <label><input type="checkbox" id="waitlist-checkbox" /> <span>Sí, quiero estar en lista de espera</span></label>
+        </div>
+
+        <div class="footer">Este mensaje se enviará automáticamente al administrador cuando el usuario no cumpla las normas solicitadas.</div>
+      </div>
+    </div>
+
+    <script>
+      // Esta página muestra la plantilla de correo de notificación de descarte.
+      // Para enviarla automáticamente al administrador desde la aplicación,
+      // use la función `sendRejectionNotice(user)` disponible en `script.js`.
+    </script>
+  </body>
+</html>

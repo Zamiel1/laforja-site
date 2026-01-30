@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<base href="https://www.laforja.com.mx/">
+<title>Lista de espera – La Forja</title>
+
+<style type="text/css">
+body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+table { border-collapse:collapse !important; }
+body { margin:0; padding:0; background:#0D0D0D; }
+</style>
+</head>
+
+<body>
+
+<table width="100%" bgcolor="#0D0D0D">
+<tr>
+<td align="center" style="padding:40px 0;">
+
+<table width="100%" style="max-width:600px;">
+<tr>
+<td align="center" style="padding-bottom:25px;">
+<img src="https://storage.googleapis.com/msgsndr/KzCkYracJ3u40qFqNddZ/media/690c08207b2dc56b734969c0.png" width="140">
+</td>
+</tr>
+
+<tr>
+<td align="center" style="color:#D90404;font-family:monospace;font-size:13px;letter-spacing:2px;">
+/// PROCESO DE ADMISIÓN ///
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#262626" style="padding:40px;color:#CCCCCC;font-family:Arial;font-size:16px;line-height:24px;">
+
+<h1 style="color:#F2F2F2;font-size:22px;">Gracias por tu sinceridad</h1>
+
+<p>
+En este momento estamos priorizando a quienes desean aportar y participar activamente en la comunidad.
+</p>
+
+<p>
+Te hemos colocado en <strong>lista de espera</strong> para la próxima generación de La Forja.
+</p>
+
+<p>
+Cuando abramos un nuevo ciclo, tendrás prioridad para ingresar.
+</p>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding:30px;color:#666;font-family:Arial;font-size:12px;">
+© 2026 La Forja · <a href="#" style="color:#666;">Darse de baja</a>
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding:30px;">
+<div style="display:flex;gap:12px;justify-content:center;">
+	<button onclick="window.location.href='https://www.laforja.com.mx/email.html'" style="background-color:#D90404;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+		Regreso Principal
+	</button>
+	<button id="send-reject" style="background:#111;color:white;padding:10px 20px;border:1px solid #D90404;border-radius:5px;cursor:pointer;">
+		Enviar aviso al administrador
+	</button>
+</div>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+<script>
+	// Botón para enviar notificación de descarte al administrador.
+	document.addEventListener('DOMContentLoaded', () => {
+		const btn = document.getElementById('send-reject');
+		if (!btn) return;
+		btn.addEventListener('click', () => {
+			const userEmail = prompt('Introduce el usuario (sin dominio), por ejemplo: miusuario');
+			if (!userEmail) return alert('Operación cancelada');
+			const userName = prompt('Introduce el nombre del usuario (opcional)') || '';
+			const join = confirm('¿Marcar en lista de espera? (Aceptar = Sí)');
+
+			// Llamar a la función global (definida en script.js)
+			if (window.sendRejectionNotice) {
+			const ok = window.sendRejectionNotice({ userEmail: userEmail + '@forja.com.mx', userName, joinWaitlist: join });
+				if (ok) alert('Notificación enviada al administrador.');
+				else alert('No se pudo enviar la notificación.');
+			} else {
+				alert('Función de envío no disponible. Asegúrate de cargar script.js.');
+			}
+		});
+	});
+</script>
+
+</body>
+</html>
